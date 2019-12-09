@@ -1,0 +1,44 @@
+配置全局变量
+git config --global user.name "your name" 
+git config --global user.email"940693374@qq.com"
+初始化
+git init
+配置ssh公钥
+ssh-keygen -t rsa -C "940693374@qq.com"
+
+链接远程仓库
+git remote add origin git@github.com:monkey-crazy/monkey_home.git
+
+克隆仓库
+裸板本库(用来做共享的版本仓库)
+git clone --bare 仓库名 新仓库名.git
+
+git clone 仓库名 新的仓库名
+git clone git@github.com:monkey-crazy/monkey_home.git
+提交文件到缓存区
+
+提交工作区的所有文件及文件夹
+git ADD .
+gti add xxx.xx
+查看文件状态
+ git status
+将文件从缓存区提交到仓库(40位16进制的数表示，前两位是文件夹名。后38位是文件名)
+git commit --message "xxxx"
+git commit -m "xxxx"
+
+
+获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
+拉取
+git pull 仓库路径
+git pull --rebase origin master
+
+
+推到远程仓库
+
+git push
+
+显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL
+git remote -v
+意思是添加所有修改的文件，注意先pull再push，避免冲突
+git add -A
+
